@@ -1,5 +1,7 @@
 package domain
 
+import "github.com/eshentials/banking-app/errs"
+
 type Customer struct {
 	ID          string `json:"id"`
 	Name        string `json:"name"`
@@ -10,5 +12,7 @@ type Customer struct {
 }
 
 type CustomerRepository interface {
-	FindAll() ([]Customer, error)
+	//status ==1 status==0 status=="", return all
+	FindAll(status string) ([]Customer, *errs.AppError)
+	ById(string) (*Customer, *errs.AppError)
 }
