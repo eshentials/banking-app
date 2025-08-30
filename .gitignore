@@ -1,0 +1,16 @@
+# Ignore environment files
+.env
+.env.*
+
+# Ignore build files
+/bin/
+/dist/
+*.exe
+*.out
+
+# Ignore Go module stuff
+vendor/
+
+# Ignore OS-specific junk
+.DS_Store
+Thumbs.db
